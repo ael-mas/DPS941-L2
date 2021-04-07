@@ -1,0 +1,72 @@
+{
+    "language": {
+        "tern_defs": {
+            "json()": {
+                "browser": {
+                    "enabled": true
+                },
+                "ecma5": {
+                    "enabled": true
+                },
+                "jQuery": {
+                    "enabled": true
+                }
+            }
+        }
+    },
+    "launchconfigurations": {
+        "@currentconfig": ""
+    },
+    "python": {
+        "@path": "/usr/local/lib/python3.4/dist-packages:/usr/local/lib/python3.5/dist-packages"
+    },
+    "robomaker": {
+        "@currentSimJobArn": "arn:aws:robomaker:us-east-1:705394361374:simulation-job/sim-g380xy0lxng5",
+        "@currentSimJobBundles": {
+            "robot": "./aws-robomaker-sample-application-delivery-challenge/robot_ws/bundle/output.tar",
+            "sim": "./aws-robomaker-sample-application-delivery-challenge/simulation_ws/bundle/output.tar"
+        },
+        "@distribution": "Melodic",
+        "@manifestPath": ""
+    },
+    "run": {
+        "configs": {
+            "@inited": "true",
+            "json()": {
+                "Colcon Build": {
+                    "command": "source /opt/ros/melodic/setup.bash && rosdep install --from-paths src --ignore-src -r -y && colcon build",
+                    "name": "Colcon Build",
+                    "runner": "Shell command",
+                    "toolbar": true
+                },
+                "Colcon Bundle": {
+                    "command": "source /opt/ros/melodic/setup.bash && colcon bundle",
+                    "name": "Colcon Bundle",
+                    "runner": "Shell command",
+                    "toolbar": true
+                },
+                "Create simulation job (541bcef8-82f2-7399-bf87-90891046dfa4)": {
+                    "command": "tail -n 1000 -f /home/ubuntu/environment//roboMakerLogs/e0fd0312-74b2-0133-af79-d8de2fd114e0.log",
+                    "name": "Create simulation job (541bcef8-82f2-7399-bf87-90891046dfa4)",
+                    "runner": "Shell command",
+                    "toolbar": false
+                },
+                "Create simulation job (a3f1c6ed-8ba7-441e-59fd-7bff064c18d6)": {
+                    "command": "tail -n 1000 -f /home/ubuntu/environment//roboMakerLogs/e0fd0312-74b2-0133-af79-d8de2fd114e0.log",
+                    "name": "Create simulation job (fc1992e4-56e7-fc34-cd08-93ac1986d383)",
+                    "runner": "Shell command",
+                    "toolbar": false
+                },
+                "Create simulation job (fc1992e4-56e7-fc34-cd08-93ac1986d383)": {
+                    "command": "tail -n 1000 -f /home/ubuntu/environment//roboMakerLogs/e0fd0312-74b2-0133-af79-d8de2fd114e0.log",
+                    "name": "Create simulation job (fc1992e4-56e7-fc34-cd08-93ac1986d383)",
+                    "runner": "Shell command",
+                    "toolbar": false
+                }
+            }
+        }
+    },
+    "welcome": {
+        "@first": true
+    }
+}
